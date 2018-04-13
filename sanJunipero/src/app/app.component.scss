@@ -2,22 +2,11 @@
   padding: 0;
 }
 
-.nav-bar {
-  height: 100%;
-  margin-top: 0.5rem;
-  position: fixed;
-
-  &.show .nav-link, &.show .navbar-brand {
-    // color: #fff;
-  }
-
-  .navbar-brand {
-    margin: 1rem;
-  }
-
-  .nav-link {
-   width: 100%; 
-  }
+.container {
+  width: 200px;
+  height: 260px;
+  position: relative;
+  perspective: 800px;
 }
 
 .card {
@@ -26,6 +15,7 @@
   position: absolute;
   transform-style: preserve-3d;
   transition: transform 1s;
+
 
   figure {
     margin: 0;

@@ -1,79 +1,9 @@
 
-<header style="background: #fff; position: fixed; width: 100%; top: 0; z-index: 2000;">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" mat-tab-nav-bar>
-    <button (click)="toggleState()" class="navbar-toggler" type="button">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <ng-container *ngIf="notMobile === 'false'">
-      <div class="nav-bar navbar-collapse" [ngClass]="{show: isIn.bool}">
-        <a href="" class="navbar-brand">San Junipero</a>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" mat-tab-link>
-                Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" mat-tab-link>
-                Music
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" mat-tab-link>
-                Shows
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" mat-tab-link>
-                Merch
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" mat-tab-link>
-              Store
-            </a>
-          </li>
-        </ul>
-      </div>
-    </ng-container>
-    <ng-container *ngIf="notMobile === 'true'">
-      <div [@navbarState]="isIn.state" class="nav-bar" [ngClass]="{show: isIn.bool}">
-        <a href="" class="navbar-brand">San Junipero</a>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" mat-tab-link>
-                Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" mat-tab-link>
-                Music
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" mat-tab-link>
-                Shows
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" mat-tab-link>
-                Merch
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" mat-tab-link>
-              Store
-            </a>
-          </li>
-        </ul>
-      </div>
-    </ng-container>
-  </nav>
-</header>
-<div style="margin-top: 3.375rem;">Test</div>
+<app-nav></app-nav>
+<!-- <div>Test</div> -->
 <!-- <router-outlet></router-outlet> -->
 
-<!-- <section class="d-flex justify-content-center">
+<section class="d-flex justify-content-center">
   <mat-card class="p-5">
     <mat-card-title style="text-align: center">San Junipero</mat-card-title>
     <mat-card-actions>
@@ -94,4 +24,4 @@
     <figure class="front d-flex justify-content-center align-items-center" style="font-size: 3rem; color: #fff;"><div>San</div></figure>
     <figure class="back d-flex justify-content-center align-items-center" style="font-size: 3rem; color: #fff;"><div>Junipero</div></figure>
   </div>
-</section> -->
+</section>

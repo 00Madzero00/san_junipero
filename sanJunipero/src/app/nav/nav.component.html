@@ -1,0 +1,16 @@
+<header>
+  <nav class="nopad navbar navbar-expand-lg navbar-light bg-light" mat-tab-nav-bar>
+    <button (click)="toggleState();" class="m-3 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [@navbarState]="isIn.state" class="test navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li mat-tab-link>Home</li>
+        <li mat-tab-link>Music</li>
+        <li mat-tab-link>Gigs</li>
+        <li mat-tab-link>Merch</li>
+        <li mat-tab-link>Store</li>
+      </ul>
+    </div>
+  </nav>
+</header>
