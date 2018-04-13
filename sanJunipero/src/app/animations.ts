@@ -16,9 +16,9 @@ export const nav = [
     })),
     state('collapsed', style({
       background: '#f8f9fa',
-      left: '-50%',
+      left: '-20%',
     })),
-    transition('collapsed => expanded', animate('700ms ease-in')),
-    transition('expanded => collapsed', animate('700ms ease-out')),
+    transition('collapsed => expanded', animate('500ms ease-out')),
+    transition('expanded => collapsed', animate('500ms ease-in')),
   ])
 ];
