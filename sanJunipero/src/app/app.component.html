@@ -1,16 +1,15 @@
 <!-- Add Intro jumbo here *header as footer* -->
-<div style="height: 80%;">Jumbo</div>
 <div class="sj-container" [class.sj-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="sj-toolbar">
     <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
     <h1 class="sj-name">San Junipero</h1>
   </mat-toolbar>
 
-  <mat-sidenav-container class="sj-sidenav-container">
-    <mat-sidenav #snav mode="side" >
+  <mat-sidenav-container class="sj-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav mode="side" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
       <mat-nav-list class="no-pad">
-        <a routerLink="/home" mat-list-item>Home</a>
-        <a routerLink="/music" mat-list-item>Music</a>
+        <a [routerLink]="['home']" routerLinkActive="active" mat-list-item>Home</a>
+        <a [routerLink]="['music']" routerLinkActive="active" mat-list-item>Music</a>
         <a mat-list-item>Gigs</a>
         <a mat-list-item>Merch</a>
         <a mat-list-item>Store</a>

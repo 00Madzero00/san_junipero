@@ -3,8 +3,8 @@ padding: 0;
 }
 
 .container {
-width: 200px;
-height: 260px;
+width: 15rem;
+height: 15rem;
 position: relative;
 perspective: 800px;
 }
@@ -31,7 +31,7 @@ figure {
 }
 
 .back {
-    background: blue;
+    background: #3f51b5;
     transform: rotateY( 180deg );
 }
 
