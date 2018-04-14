@@ -3,6 +3,7 @@ import { NgModule, PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,11 +19,21 @@ import { MatMenuModule } from '@angular/material/menu';
 import {MediaMatcher} from '@angular/cdk/layout';
 
 import { AppComponent } from './app.component';
+import { MusicComponent } from './music/music.component';
+import { HomeComponent } from './home/home.component';
 
+const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'music', component: MusicComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: HomeComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
+    MusicComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'San Junipero' }),
@@ -36,7 +47,8 @@ import { AppComponent } from './app.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterModule.forRoot(appRoutes)
   ],
   exports: [
     FlexLayoutModule,
