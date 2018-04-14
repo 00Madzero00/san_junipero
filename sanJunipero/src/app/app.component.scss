@@ -29,10 +29,14 @@
 }
 
 .active {
-  background: #FFD264;
+  background: #F9B713;
   color: #fff;
 
   &:focus {
+    background: #F9B713;
+  }
+
+  &:hover {
     background: #FFD264;
   }
 }
