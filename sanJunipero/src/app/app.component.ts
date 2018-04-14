@@ -11,16 +11,13 @@ export class AppComponent {
   constructor() {
   }
 
-  public flip(event) {
-    const findCard = /card/;
-    const findFlip = /flipped/;
+  public flip(elem) {
+    let tmp;
 
-    const tmp = event.path.filter(elem => {
-      if (findCard.test(elem.className)) {
-        return elem;
-      }
-    });
+    while ((elem = elem.parentElement) && !elem.classList.contains('container')) {
+      tmp = elem;
+    }
 
-    findFlip.test(tmp[0].className) ? tmp[0].className = 'card' : tmp[0].className = 'card flipped';
+    tmp.classList.contains('flipped') ? tmp.className = 'card' : tmp.className = 'card flipped';
   }
 }

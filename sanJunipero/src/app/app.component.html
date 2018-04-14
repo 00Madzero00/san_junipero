@@ -1,4 +1,4 @@
-
+<!-- Add Intro jumbo here *header as footer* -->
 <app-nav></app-nav>
 <!-- <div>Test</div> -->
 <!-- <router-outlet></router-outlet> -->
@@ -14,13 +14,13 @@
 </section>
 
 <section class="container no-pad pt-4 mb-4">
-  <div (click)="flip($event);" class="card">
+  <div (click)="flip($event.target);" class="card">
     <figure class="front d-flex justify-content-center align-items-center" style="font-size: 3rem; color: #fff;"><div>San</div></figure>
     <figure class="back d-flex justify-content-center align-items-center" style="font-size: 3rem; color: #fff;"><div>Junipero</div></figure>
   </div>
 </section>
 <section class="container no-pad pt-4 mb-4">
-  <div (click)="flip($event);" class="card">
+  <div (click)="flip($event.target);" class="card">
     <figure class="front d-flex justify-content-center align-items-center" style="font-size: 3rem; color: #fff;"><div>San</div></figure>
     <figure class="back d-flex justify-content-center align-items-center" style="font-size: 3rem; color: #fff;"><div>Junipero</div></figure>
   </div>

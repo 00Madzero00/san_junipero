@@ -19,7 +19,6 @@ export class NavComponent {
 
   public toggleState() {
     const bool = this.isIn.bool;
-    console.log('toggled');
     bool === false ? this.isIn = {bool: true, state: 'expanded'} : this.isIn = {bool: false, state: 'collapsed'};
   }
 
