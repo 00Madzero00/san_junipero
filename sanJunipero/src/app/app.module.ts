@@ -10,15 +10,19 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatMenuModule } from '@angular/material/menu';
+
+import {MediaMatcher} from '@angular/cdk/layout';
 
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'San Junipero' }),
@@ -29,7 +33,10 @@ import { NavComponent } from './nav/nav.component';
     MatProgressSpinnerModule,
     MatTabsModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
+    MatMenuModule
   ],
   exports: [
     FlexLayoutModule,
@@ -39,19 +46,14 @@ import { NavComponent } from './nav/nav.component';
     MatProgressSpinnerModule,
     MatTabsModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule,
+    MatMenuModule
   ],
-  providers: [],
+  providers: [MediaMatcher],
   bootstrap: [AppComponent]
 })
 export class AppModule {
 
-  // constructor(
-  //   @Inject(PLATFORM_ID) private platformId: Object,
-  //   @Inject(APP_ID) private appId: string) {
-  //   const platform = isPlatformBrowser(platformId) ?
-  //     'in the browser' : 'on the server';
-  //   console.log(`Running ${platform} with appId=${appId}`);
-    
-  // }
 }
