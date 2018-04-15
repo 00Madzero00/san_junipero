@@ -2,7 +2,7 @@
   <video class="jumbo" [width]="width" [height]="height" onloadedmetadata="this.muted = true" autoplay loop>
     <source src="../../assets/media/videos/test.mp4" sizes>
   </video>
-  <div class="overlay" [style.height.px]="height" [style.width.px]="width"></div>
+  <div class="overlay" [style.height.px]="height" [style.width.px]="width"></div>  <!-- "Position: absolute;" messes with sidebar flex (adds side scroll) -->
   <img class="position-absolute jumboLogo" src="../../assets/media/images/finger.png" alt="">
 </div>
 <div class="d-flex justify-content-center">
