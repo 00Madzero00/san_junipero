@@ -2,7 +2,8 @@
 <div class="sj-container" [class.sj-is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" class="sj-toolbar">
     <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-    <h1 class="sj-name">San Junipero</h1>
+    <!-- <h1 class="sj-name">San Junipero</h1> -->
+    <img src="../assets/media/images/sj-white-sm.png" alt="">
   </mat-toolbar>
 
   <mat-sidenav-container class="sj-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
@@ -16,7 +17,7 @@
       </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content>
+    <mat-sidenav-content class="sj-sidenav-content">
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>

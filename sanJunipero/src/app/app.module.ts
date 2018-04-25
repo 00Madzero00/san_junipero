@@ -21,6 +21,7 @@ import {MediaMatcher} from '@angular/cdk/layout';
 import { AppComponent } from './app.component';
 import { MusicComponent } from './music/music.component';
 import { HomeComponent } from './home/home.component';
+import { HomeService } from './home/home.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -63,7 +64,7 @@ const appRoutes: Routes = [
     MatListModule,
     MatMenuModule
   ],
-  providers: [MediaMatcher],
+  providers: [MediaMatcher, HomeService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

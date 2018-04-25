@@ -1,10 +1,11 @@
 <div class="d-flex justify-content-center mb-3">
+  <!-- Unsure about the video loop idea... -->
   <video class="jumbo" [width]="width" [height]="height" onloadedmetadata="this.muted = true" autoplay loop>
-    <source src="../../assets/media/videos/test.mp4" sizes>
+    <!-- <source src="../../assets/media/videos/geometric.mp4" sizes> -->
   </video>
-  <!-- FIXME: "Position: absolute;" messes with sidebar flex (adds side scroll). TODO: overlay cycle through colours / randomise -->
+  <!-- TODO: overlay cycle through colours / randomise -->
   <!-- <div class="overlay" [style.height.px]="height" [style.width.px]="width"></div> -->
-  <img class="position-absolute jumboLogo" src="../../assets/media/images/finger.png" alt="">
+  <img [ngClass]="{h: orientation}" class="position-absolute jumboLogo" src="../../assets/media/images/sj-group.png" alt="">
 </div>
 <div class="d-flex justify-content-center">
   <p>

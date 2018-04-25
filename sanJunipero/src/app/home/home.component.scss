@@ -8,8 +8,12 @@ video {
 }
 
 .jumboLogo {
-  height: 50%;
+  height: 47.5%;
   position: absolute;
-  top: 45%;
+  top: 47.5%;
   transform: translateY(-50%);
+
+  &.h {
+    height: 100%;
+  }
 }
