@@ -22,10 +22,13 @@ import { AppComponent } from './app.component';
 import { MusicComponent } from './music/music.component';
 import { HomeComponent } from './home/home.component';
 import { HomeService } from './home/home.service';
+import { GigsComponent } from './gigs/gigs.component';
+import { GigsService } from './gigs/gigs.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'music', component: MusicComponent },
+  { path: 'gigs', component: GigsComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: HomeComponent }
 ];
@@ -35,6 +38,7 @@ const appRoutes: Routes = [
     AppComponent,
     MusicComponent,
     HomeComponent,
+    GigsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'San Junipero' }),
@@ -64,7 +68,7 @@ const appRoutes: Routes = [
     MatListModule,
     MatMenuModule
   ],
-  providers: [MediaMatcher, HomeService],
+  providers: [MediaMatcher, HomeService, GigsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

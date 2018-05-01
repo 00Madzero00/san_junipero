@@ -27,12 +27,12 @@ transition: transform 1s;
     }
 
     .front {
-        background: red;
+        background: #F02425;
         cursor: pointer;
     }
 
     .back {
-        background: #3f51b5;
+        background: #3B62A5;
         transform: rotateY( 180deg );
     }
 
