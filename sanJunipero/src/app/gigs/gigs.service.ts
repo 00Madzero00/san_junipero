@@ -21,11 +21,11 @@ export class GigsService {
   public songKick() {
     const baseURI = 'http://api.songkick.com/api/3.0/artists/{artist_id}/calendar.json?apikey={your_api_key}';
 
-    this.http.get(baseURI).subscribe(
-      (resp: IEvent) => {
-        console.log(resp);
-        this.gigs.next(resp);
-      }
-    );
+    // this.http.get(baseURI).subscribe(
+    //   (resp: IEvent) => {
+    //     console.log(resp);
+    //     this.gigs.next(resp);
+    //   }
+    // );
   }
 }

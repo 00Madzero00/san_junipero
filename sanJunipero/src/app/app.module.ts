@@ -4,6 +4,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'San Junipero' }),
+    HttpClientModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
     MatCardModule,

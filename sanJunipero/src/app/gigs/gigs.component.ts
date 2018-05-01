@@ -13,24 +13,22 @@ import { IEvent } from '../models/gigs.model';
 })
 export class GigsComponent implements OnInit, OnDestroy {
 
-  constructor(private gigs: GigsService) {
+  constructor(private gigs: GigsService) {}
+
+  public events: IEvent;
+  private subs: Subscription;
+
+  ngOnInit(): void {
     this.subs = this.gigs.gigs.subscribe((res: IEvent) => {
       this.events = res;
     });
   }
 
-  public events: IEvent;
-  private subs: Subscription;
-
-  ngOnInit() {
-    this.getGigs();
-  }
-
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.subs.unsubscribe();
   }
 
-  private getGigs() {
+  public getGigs(): void {
     this.gigs.songKick();
   }
 

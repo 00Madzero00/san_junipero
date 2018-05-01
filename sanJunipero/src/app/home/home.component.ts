@@ -39,14 +39,14 @@ export class HomeComponent implements OnInit {
 
     console.log(video);
 
-    this.height = window.innerHeight - 250;
+    this.height = window.innerHeight - 100;
     this.width = window.innerWidth;
 
     this.orientation = this.getOrientation(window);
 
     window.addEventListener('resize', function() {
       _self.orientation = _self.getOrientation(this);
-      _self.height = this.innerHeight - 250;
+      _self.height = this.innerHeight - 100;
       _self.width = this.innerWidth;
     });
 
