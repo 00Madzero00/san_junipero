@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { FlexLayoutModule } from '@angular/flex-layout';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -44,7 +44,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule.withServerTransition({ appId: 'San Junipero' }),
     HttpClientModule,
-    FlexLayoutModule,
+    // FlexLayoutModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
@@ -58,7 +58,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   exports: [
-    FlexLayoutModule,
+    // FlexLayoutModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,

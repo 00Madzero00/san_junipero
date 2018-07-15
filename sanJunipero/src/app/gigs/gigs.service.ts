@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs';
 
 import { IEvent } from '../models/gigs.model';
 
@@ -19,7 +19,7 @@ export class GigsService {
   * @memberof GigsService
   */
   public songKick() {
-    const baseURI = 'http://api.songkick.com/api/3.0/artists/{artist_id}/calendar.json?apikey={your_api_key}';
+    // const baseURI = 'http://api.songkick.com/api/3.0/artists/{artist_id}/calendar.json?apikey={your_api_key}';
 
     // this.http.get(baseURI).subscribe(
     //   (resp: IEvent) => {
