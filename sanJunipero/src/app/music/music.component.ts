@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MusicService } from './music.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-music',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MusicComponent implements OnInit {
 
-  constructor() { }
+  public music;
+
+  constructor(
+    private musicService: MusicService
+  ) { }
 
   ngOnInit() {
+    this.musicService.getMusicJSON()
+      .then(
+        m => {
+          if (m) {
+            console.log('music', m);
+            this.music = m;
+          }
+        }
+      );
   }
 
   public flip(elem) {

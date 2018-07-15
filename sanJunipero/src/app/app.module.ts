@@ -25,6 +25,7 @@ import { HomeComponent } from './home/home.component';
 import { HomeService } from './home/home.service';
 import { GigsComponent } from './gigs/gigs.component';
 import { GigsService } from './gigs/gigs.service';
+import { MusicService } from './music/music.service';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -70,7 +71,7 @@ const appRoutes: Routes = [
     MatListModule,
     MatMenuModule
   ],
-  providers: [MediaMatcher, HomeService, GigsService],
+  providers: [MediaMatcher, HomeService, GigsService, MusicService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
